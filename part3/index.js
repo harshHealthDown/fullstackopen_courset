@@ -8,6 +8,7 @@ app.use(express.json())
 let's activate the json-parser and implement an intial handler for dealing with the HTTP POST request.
 Without the json-parser, the body property would be undefined. The json parser takes the JSON data of a request, transforms it into a Javascript object and then attaches it to the body property of the request object before the route handler is called.
 */
+app.use(express.static('dist'))
 app.use(cors())
 app.use(express.json())
 
